@@ -83,25 +83,7 @@ To install and use this Python script along with its dependencies, you can follo
    pip install -r requirements.txt
    ```
 
-3. **Use the script**:
-
-   You can now use the `compare_excel_files` function from the script.
-
-   Example usage:
-
-   ```python
-   import pandas as pd
-   
-   def compare_excel_files(file1, file2, output_file):
-       # ... (rest of the code)
-   
-   # Usage example
-   compare_excel_files('file1.xlsx', 'file2.xlsx', 'changes.xlsx')
-   ```
-
-   Replace `'file1.xlsx'`, `'file2.xlsx'`, and `'changes.xlsx'` with the actual file paths.
-
-4. **Run the script**:
+3. **Run the script**:
 
    To execute the script, simply run it using a Python interpreter:
 
