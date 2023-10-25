@@ -72,7 +72,7 @@ To install and use this Python script along with its dependencies, you can follo
    You can clone the repository using Git. Open your terminal/command prompt and run:
 
    ```
-   git clone https://github.com/username/repository.git
+   git clone https://github.com/widilo/compare-two-excel-files-with-python.git
    ```
 
 2. **Install the dependencies**:
