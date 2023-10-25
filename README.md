@@ -1,6 +1,6 @@
 # Compare two Excel files using Python
 
-How the script works step by step:
+The compare_excel_files Python script is designed to streamline the process of analyzing and identifying changes in stock levels between two Excel files. Leveraging the power of the pandas library, this script efficiently handles data manipulation and comparison tasks. The underlying mechanism involves several key steps:
 
 1. **Importing Libraries**:
 
@@ -10,8 +10,6 @@ How the script works step by step:
 
    This line imports the `pandas` library and gives it the alias `pd`. `pandas` is a powerful data manipulation and analysis library in Python.
 
-   
-
 2. **Defining the Function**:
 
    ```python
@@ -19,8 +17,6 @@ How the script works step by step:
    ```
 
    This line defines a function named `compare_excel_files` that takes three arguments: `file1`, `file2`, and `output_file`. These arguments represent the file paths for the two input Excel files and the output Excel file.
-
-   
 
 3. **Reading Excel Files**:
 
@@ -31,8 +27,6 @@ How the script works step by step:
 
    These lines use `pandas` to read the Excel files specified by `file1` and `file2` and store them as DataFrames (`df1` and `df2` respectively). A DataFrame is a tabular data structure similar to a spreadsheet.
 
-   
-
 4. **Merging DataFrames**:
 
    ```python
@@ -41,11 +35,7 @@ How the script works step by step:
 
    This line merges the two DataFrames (`df1` and `df2`) based on a common column, in this case, `'SKU'`. The `how='outer'` parameter means that it will perform an outer join, which includes all rows from both DataFrames.
 
-   
-
    The `suffixes=('_old', '_new')` parameter adds suffixes to the column names to indicate which DataFrame they originated from.
-
-   
 
 5. **Identifying Changed Rows**:
 
@@ -55,8 +45,6 @@ How the script works step by step:
 
    This line creates a new DataFrame `changed_rows` containing only the rows where the 'STOCK_old' column is not equal to the 'STOCK_new' column. This means it will contain rows where the stock levels have changed.
 
-   
-
 6. **Saving Changes to Excel File**:
 
    ```python
@@ -64,8 +52,6 @@ How the script works step by step:
    ```
 
    This line saves the DataFrame `changed_rows` to an Excel file specified by `output_file`. The `index=False` parameter ensures that the row indices are not included in the output.
-
-   
 
 7. **Usage Example**:
 
