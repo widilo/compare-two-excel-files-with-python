@@ -1,6 +1,6 @@
 # Compare two Excel files using Python
 
-The compare_excel_files Python script is designed to streamline the process of analyzing and identifying changes in stock levels between two Excel files. Leveraging the power of the pandas library, this script efficiently handles data manipulation and comparison tasks. The underlying mechanism involves several key steps:
+The compare_excel_files Python script is designed to streamline the process of analyzing and identifying changes in stock levels between two Excel files. The underlying mechanism involves several key steps:
 
 1. **Importing Libraries**:
 
