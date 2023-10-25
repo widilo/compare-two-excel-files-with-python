@@ -93,3 +93,45 @@ To install and use this Python script along with its dependencies, you can follo
 
 Note: Make sure you have Python and Git installed on your system before following these steps.
 
+## How to add additional columns?
+
+To add a "price" column to the script, we'll assume that the SKU values remain constant, while the stock and price values may change:
+
+```python
+import pandas as pd
+
+def compare_excel_files(file1, file2, output_file):
+    # Read the Excel files
+    df1 = pd.read_excel(file1)
+    df2 = pd.read_excel(file2)
+
+    # Merge the data frames on the 'SKU' column
+    merged = df1.merge(df2, on='SKU', how='outer', suffixes=('_old', '_new'))
+
+    # Identify rows with changes in stock or price
+    changed_rows = merged[(merged['STOCK_old'] != merged['STOCK_new']) | 
+                          (merged['PRICE_old'] != merged['PRICE_new'])]
+
+    # Save the changes to a new Excel file
+    changed_rows.to_excel(output_file, index=False)
+
+# Usage example
+compare_excel_files('file1.xlsx', 'file2.xlsx', 'changes.xlsx')
+```
+
+In this modified script, we've added a new column called "PRICE". The script now identifies rows with changes in both stock and price:
+
+1. **Reading Excel Files**:
+   - No changes in this section. It reads the Excel files as before.
+
+2. **Merging DataFrames**:
+   - The merge operation remains the same. It merges the DataFrames based on the 'SKU' column.
+
+3. **Identifying Changed Rows**:
+   - The condition for identifying changed rows is updated. It now checks both the 'STOCK' and 'PRICE' columns for differences.
+
+4. **Usage Example**:
+   - Usage remains the same. It calls the `compare_excel_files` function with the file paths and output file name.
+
+With these modifications, the script will now compare both stock levels and prices, identifying rows where either or both of these values have changed.
+
