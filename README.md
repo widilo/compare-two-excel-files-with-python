@@ -63,3 +63,51 @@ The compare_excel_files Python script is designed to streamline the process of a
 
 In summary, this script reads two Excel files, merges them based on the 'SKU' column, identifies rows with changes in the stock levels, and saves the changes to a new Excel file. The script provides a convenient way to compare two sets of stock data.
 
+## Installation
+
+To install and use this Python script along with its dependencies, you can follow these steps:
+
+1. **Clone the GitHub repository**:
+
+   You can clone the repository using Git. Open your terminal/command prompt and run:
+
+   ```
+   git clone https://github.com/username/repository.git
+   ```
+
+2. **Install the dependencies**:
+
+   Run the following command to install the required dependencies using `pip`:
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. **Use the script**:
+
+   You can now use the `compare_excel_files` function from the script.
+
+   Example usage:
+
+   ```python
+   import pandas as pd
+   
+   def compare_excel_files(file1, file2, output_file):
+       # ... (rest of the code)
+   
+   # Usage example
+   compare_excel_files('file1.xlsx', 'file2.xlsx', 'changes.xlsx')
+   ```
+
+   Replace `'file1.xlsx'`, `'file2.xlsx'`, and `'changes.xlsx'` with the actual file paths.
+
+4. **Run the script**:
+
+   To execute the script, simply run it using a Python interpreter:
+
+   ```
+   python compare_excel_files.py
+   ```
+
+Note: Make sure you have Python and Git installed on your system before following these steps.
+
