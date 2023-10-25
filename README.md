@@ -1,6 +1,6 @@
 # Compare two Excel files using Python
 
-Let's break down how the script works step by step:
+How the script works step by step:
 
 1. **Importing Libraries**:
 
